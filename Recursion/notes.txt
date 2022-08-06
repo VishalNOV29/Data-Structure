@@ -1,0 +1,29 @@
+Recursion is very interesting concept in programming world. Initially I was feared from this but now it is okay for me.
+Here I am going to expalin how recursion works so that I can easily revise in future whenever it required.
+Recursion is very interesting concept in programming world. Initially I was feared from this but now it is okay for me. 
+Here I am going to explain how recursion works so that I can easily revise in future whenever it required. 
+Till now I have not any idea about it. It was like khidchi. But still my concept is fully cleared. 
+Actually in recursion the function start returning it’s value when the base condition is reached. It uses stack to 
+store all the function that was called in the function. Let understand recursion with the help of example.
+def fact(num):
+       if num==1:
+             return 1
+      else:
+             return num*fact(num-1)
+fact(5)
+Before today I was thinking that this function should return 1 because when the base condition will be reached
+then the function will terminated after returning 1. But it was returning the factorial of that number.
+Then I realize that I am missing the logic behind the execution of this program. 
+I am going to explain the execution of this program.
+First of all a stack will be created that will store all the function that is being called inside this function 
+and when the base condition will be reached then the function start returning the value.
+fact(5)=5*fact(4)
+fact(4)=4*fact(3)
+fact(3)=3*fact(2)
+fact2=2*fact(1)
+fact(1)=1*fact(0)
+fact(0)=1  now the base condition is reached. Till now I was thinking that the whole function should 1 and exit 
+from this function. But I was wrong because this base case was not for the whole function. This base case will be 
+used by fact(0) and now I am going to show how the factorial will be calculated
+Everything is mentioned inside this picture. It is shown that how a recursion works. When a function return it’s value 
+then it is popped from the stack.
